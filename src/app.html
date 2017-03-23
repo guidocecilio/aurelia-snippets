@@ -1,0 +1,17 @@
+<template>
+  <h1>${heading}</h1>
+
+  <form submit.trigger="addSnippet()">
+    <input type="text" value.bind="snippetCode">
+    <button type="submit">Add Snippet</button>
+  </form>
+
+  <ul>
+    <li repeat.for="snippet of snippets">
+      <span>
+        ${snippet.code}
+      </span>
+      <button click.trigger="removeSnippet(snippet)">Remove</button>
+    </li>    
+  </ul>
+</template>
